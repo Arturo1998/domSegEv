@@ -3,6 +3,8 @@ import { dameDocs, onDameDocs } from "./fireBase.js";
 const lista = document.getElementById("contenedorListas");
 const formulario = document.getElementById("formulario");
 
+/* Cargamos eñ ñistado de mascotas al añadir la información (método mágico) */
+
 window.addEventListener("DOMContentLoaded", async () => {
 await onDameDocs('Mascotas', (docs) => {
     let html = "";
@@ -18,6 +20,8 @@ await onDameDocs('Mascotas', (docs) => {
     })
     lista.innerHTML = html;
 });
+
+/* Cargamos eñ ñistado de mascotas al añadir la información (método estático) */
 
 /*window.addEventListener("DOMContentLoaded", async () => {
     const total = await dameDocs('Mascotas')

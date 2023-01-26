@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div onclick='console.log("Has pichado el div")'>
+        <button onclick="pincha1(event)">Hola</button>
+    </div>
+    <script>
+        const pincha1 = (e) =>{
+            e.stopPropagation();
+            console.log("Has pinchado el botón");
+        }
+    </script>
+</body>
+
+
+<style>
+    div{
+        border: solid 1px black;
+    }
+</style>
+</html>
