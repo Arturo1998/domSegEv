@@ -35,6 +35,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore()
 
+//CRUD
+
 export const dameDocs = (ref) => getDocs(collection(db,ref));
 export const onDameDocs = (ref, callback) => onSnapshot(collection(db,ref), callback);
-//CRUD
+export const anadeReserva = (ref, reserva) => addDoc(collection(db, ref), reserva);
+export const borraDoc = (ref, id) => deleteDoc(doc(db, ref, id));
+export const editarDoc = (ref, id, objeto) => updateDoc(doc(db,ref,id), objeto);
+export const cogerDoc = (ref, id) => getDoc(doc(db, ref, id));
