@@ -31,6 +31,8 @@ const firebaseConfig = {
 
 };
 
+
+// Initialize Firebase
 //Conectamos con la base de datos
 const app = initializeApp(firebaseConfig);
 const db = getFirestore()
